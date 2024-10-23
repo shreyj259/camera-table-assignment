@@ -1,5 +1,5 @@
 import React from 'react';
-import './SearchBox.css';
+import './searchbox.css';
 import useDebounce from '../../utils/useDebounce';
 
 interface SearchBoxProps {
