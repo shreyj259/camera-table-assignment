@@ -1,0 +1,233 @@
+.table-header {
+    background: #fff;
+    margin-top: 5px;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 16px 24px 16px ;
+  }
+  
+  .header-select-group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex: 0 0 auto;
+    min-width: 150px;
+  }
+  
+  .header-columns-group {
+    display: flex;
+    align-items: center;
+    gap: 88px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  
+  .checkbox-base {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    flex: 0 0 auto;
+    min-width: 16px;
+  }
+  
+  .column-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1 1 auto;
+    min-width: 100px;
+  }
+  
+  .header-text {
+    font-feature-settings: "liga" off, "clig" off;
+  }
+  
+  .uppercase {
+    text-transform: uppercase;
+  }
+  
+  *:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+  }
+  
+  @media (max-width: 991px) {
+    .table-header {
+      padding: 0 20px;
+    }
+    
+    .header-columns-group {
+      gap: 40px;
+    }
+  }
+
+
+  .camera-list-item {
+    background: #fff;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 15px 24px ;
+  }
+  
+  .camera-list-item__selection {
+    align-self: stretch;
+    display: flex;
+    gap: 16px;
+    width: 250px;
+    flex:1;
+  }
+  
+  .camera-list-item__checkbox {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  .camera-list-item__checkbox:focus-visible {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+  
+  .camera-list-item__info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .camera-list-item__header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .camera-list-item__status-indicator {
+    background-color: #029262;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .camera-list-item__name {
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  .camera-list-item__settings-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+ 
+  
+  .camera-list-item__health {
+    display: flex;
+    flex:1;
+    width: 100px;
+  }
+  
+  .camera-list-item__cloud-status,
+  .camera-list-item__edge-status {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px;
+  }
+  
+  .camera-list-item__status-icon,
+  .camera-list-item__cloud-icon,
+  .camera-list-item__edge-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .camera-list-item__location {
+    color: #545454;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    flex:1;
+    width: 130px;
+  }
+  
+  .camera-list-item__details {
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .camera-list-item__recorder-name,
+  .camera-list-item__task-count {
+    color: #545454;
+    font-family: Roboto, system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    flex: 1;
+    width:160px;
+  }
+
+  .camera-list-item__task-count{
+    width: 70px;
+  }
+
+  .camera-list-item__status-badge-container{
+    width: 100px;
+    flex: 1;
+  }
+  
+  .camera-list-item__status-badge {
+    background-color: rgba(2, 146, 98, 0.1);
+    color: #029262;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 2px;
+  }
+  
+  .camera-list-item__action-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    flex:1;
+  }
+  
+  .camera-list-item__action-button:focus-visible {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+  
+  .camera-list-item__action-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  @media (max-width: 991px) {
+    .camera-list-item {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  
+    .camera-list-item__status-badge {
+      white-space: normal;
+    }
+  
+    .camera-list-item__details {
+      max-width: 100%;
+    }
+  }

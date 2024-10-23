@@ -1,0 +1,17 @@
+.title-bar{
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.title-container .title{
+    font-size: 22px;
+    font-weight: 500;
+    color: #212121;
+}
+
+.title-container .subtitle{
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #545454;
+}

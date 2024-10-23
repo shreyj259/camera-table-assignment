@@ -1,0 +1,116 @@
+.pagination {
+    justify-content: flex-end;
+    align-items: center;
+    background: #fff;
+    display: flex;
+    width: 100%;
+    padding: 13px 20px;
+  }
+  
+  .pagination-options {
+    display: flex;
+    min-width: 240px;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .dropdown-container {
+    position: relative;
+  }
+  
+  .page-selector {
+    border-radius: 3px;
+    background-color: rgba(247, 249, 249, 0);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #545454;
+    padding: 3px 9px;
+    font: 400 12px Inter, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .page-selector:hover {
+    background-color: rgba(247, 249, 249, 0.5);
+  }
+  
+  .dropdown-arrow {
+    width: 8px;
+    height: 12.8px;
+    object-fit: contain;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0;
+    z-index: 1000;
+  }
+  
+  .dropdown-item {
+    padding: 8px 16px;
+    color: #545454;
+    font: 400 12px Inter, sans-serif;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: rgba(247, 249, 249, 0.5);
+  }
+  
+  .dropdown-item[aria-selected="true"] {
+    background-color: rgba(247, 249, 249, 0.8);
+  }
+  
+  .items-count {
+    color: #545454;
+    font: 400 12px Inter, sans-serif;
+  }
+  
+  .pagination-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .nav-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .nav-button:not(:disabled):hover {
+    opacity: 0.8;
+  }
+  
+  .nav-icon {
+    width: 11px;
+    height: 10.12px;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 991px) {
+    .pagination {
+      max-width: 100%;
+    }
+    
+    .page-selector {
+      white-space: normal;
+    }
+  }

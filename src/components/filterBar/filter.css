@@ -1,0 +1,114 @@
+.filters {
+    align-items: center;
+    background: var(--Primary-Product-White, #fff);
+    display: flex;
+    margin-top: 24px;
+    width: 100%;
+    gap: 16px;
+    color: var(--Text-Type-Body-Other, #7e7e7e);
+    white-space: nowrap;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 4px 12px;
+    font: 500 14px/1 Inter, sans-serif;
+  }
+  
+  .filter-input {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--radius-xs, 4px);
+    border: 1px solid var(--Whites-Gray-Shade-Dark, #ced4da);
+    background: var(--Primary-Product-White, #fff);
+    align-self: stretch;
+    display: flex;
+    gap: 40px;
+    width: 198px;
+    height: 33.6px;
+    margin: auto 0;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  
+  .filter-input__content {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: start;
+    margin: auto 0;
+  }
+  
+  .filter-input__icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 16px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .filter-input__placeholder {
+    font-feature-settings: "liga" off, "clig" off;
+    align-self: stretch;
+    gap: 10px;
+    margin: auto 0;
+  }
+  
+  .filter-input__dropdown-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 16px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+
+  .filter-input__cross-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 18px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .filter-input__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--Primary-Product-White, #fff);
+    border: 1px solid var(--Whites-Gray-Shade-Dark, #ced4da);
+    border-top: none;
+    border-radius: 0 0 var(--radius-xs, 4px) var(--radius-xs, 4px);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .filter-input__option {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .filter-input__option:hover {
+    background-color: var(--Whites-Gray-Shade-Light, #f8f9fa);
+  }
+  
+  @media (max-width: 991px) {
+    .filters {
+      max-width: 100%;
+      margin-right: 2px;
+      white-space: initial;
+    }
+    
+    .filter-input,
+    .filter-input__content,
+    .filter-input__placeholder {
+      white-space: initial;
+    }
+  }
