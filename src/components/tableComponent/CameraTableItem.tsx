@@ -1,5 +1,6 @@
 import React from 'react';
 import './table.css';
+import HelathStatusComponent from './HealthStatusComponent';
 
 interface CameraListItemProps {
   id:string|number;
@@ -9,6 +10,7 @@ interface CameraListItemProps {
   taskCount: number;
   recorderName: string;
   activeStatus:string;
+  health:{cloud?:string; device?:string;}
   current_status:'Online'|"Offline";
   onSelect?: () => void;
   onActionClick?: () => void;
@@ -24,6 +26,7 @@ export const CameraListItem: React.FC<CameraListItemProps> = ({
   recorderName,
   activeStatus,
   current_status,
+  health,
   onSelect,
   onActionClick,
   updateActiveStatus
@@ -66,15 +69,7 @@ export const CameraListItem: React.FC<CameraListItemProps> = ({
         </div>
       </div>
 
-      <div className="camera-list-item__health">
-        <div className="camera-list-item__cloud-status">
-          <img src="./assets/cloud-icon.svg" alt="Cloud status" className="camera-list-item__cloud-icon" />
-        </div>
-        <div className="camera-list-item__edge-status">
-          <img src="./assets/storage-icon.svg" alt="Edge status" className="camera-list-item__edge-icon" />
-        </div>
-        
-      </div>
+      <HelathStatusComponent {...health}/>
 
       <div className='camera-list-item__location'>
       <p >{location}</p>

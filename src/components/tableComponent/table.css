@@ -80,7 +80,7 @@
     align-self: stretch;
     display: flex;
     gap: 16px;
-    width: 250px;
+    min-width: 250px;
     flex:1;
   }
   
@@ -246,4 +246,43 @@
     .camera-list-item__details {
       max-width: 100%;
     }
+  }
+
+
+  .camera-health {
+    border-radius: 0;
+    display: flex;
+    width: 20px;
+    aspect-ratio: 1;
+    flex-direction: column;
+    color: #343434;
+    white-space: nowrap;
+    text-align: center;
+    font: 500 10px Inter, sans-serif;
+  }
+  
+  .camera-health-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    width: 100%;
+    padding: 3px 8px 10px;
+  }
+  
+  .camera-health-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .camera-health-label {
+    position: relative;
+    top:3px;
+    left: -1px;
   }
