@@ -99,7 +99,7 @@ export function useFilteredData<T extends DataItem>({
   const updateActiveStatus = async (id: number | string, newStatus: string) => {
     setStatusUpdateLoading(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_APIURL}/update/status`, {
+      const response = await fetch(`${import.meta.env.VITE_APIURL}/update/camera/status  `, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -159,8 +159,8 @@ export function useFilteredData<T extends DataItem>({
     }
 
     if (filters.location && filters.location !== '') {
-      filtered = filtered.filter(item => item.location === filters.location);
       const selectedlocation = filters?.location?.toLowerCase().trim();
+      console.log(selectedlocation)
       filtered = filtered.filter(item =>
         item.location.toLowerCase().includes(selectedlocation)
       );

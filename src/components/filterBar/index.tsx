@@ -8,7 +8,7 @@ const Filters: React.FC<{ setLocation: (query: string) => void; setStatus: (quer
       icon: "./assets/location-icon.svg",
       placeholder: "Location",
       altText: "Location icon",
-      options: ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"],
+      options: ["Denver", "Chicago", "Los Angeles", "San Diego", "Miami","Houston","New York City"],
       setFilter:setLocation
     },
     {

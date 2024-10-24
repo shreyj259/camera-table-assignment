@@ -110,10 +110,17 @@
   }
   
   .camera-list-item__status-indicator {
-    background-color: #029262;
     border-radius: 50%;
     width: 10px;
     height: 10px;
+  }
+
+  .camera_active{
+    background-color: #029262;
+  }
+
+  .camera_inactive{
+    background-color: #DC3545;
   }
   
   .camera-list-item__name {
@@ -190,13 +197,22 @@
   }
   
   .camera-list-item__status-badge {
-    background-color: rgba(2, 146, 98, 0.1);
-    color: #029262;
     font-family: Inter, system-ui, sans-serif;
     font-size: 12px;
     font-weight: 500;
     padding: 4px 8px;
     border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .camera-list-item_active_status{
+    background-color: rgba(2, 146, 98, 0.1);
+    color: #029262;
+  }
+
+  .camera-list-item_inactive_status{
+    background-color: #F0F0F0;
+    color: #545454;
   }
   
   .camera-list-item__action-button {

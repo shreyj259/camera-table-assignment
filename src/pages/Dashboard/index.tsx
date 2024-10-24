@@ -16,7 +16,7 @@ const Dashboard = () => {
         <TableHeader />
         {
           data?.map((item:any)=>{
-            return <CameraListItem key={item.id} name={item.name} hasWarning={item.hasWarning} onActionClick={()=>deleteItem(item.id)} updateActiveStatus={updateActiveStatus} taskCount={item.tasks} isActive={false} recorderName={item.recorder} location={item.location}  />
+            return <CameraListItem id={item.id} current_status={item.current_status} key={item.id} name={item.name} hasWarning={item.hasWarning} activeStatus={item.status} onActionClick={()=>deleteItem(item.id)} updateActiveStatus={updateActiveStatus} taskCount={item.tasks} recorderName={item.recorder} location={item.location}  />
           })
         }
         <PaginationControls currentPage={currentPage} onPageChange={setCurrentPage} onItemsPerPageChange={setPageSize} totalItems={totalItems}  />

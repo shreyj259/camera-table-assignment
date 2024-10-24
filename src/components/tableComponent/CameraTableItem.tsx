@@ -2,24 +2,28 @@ import React from 'react';
 import './table.css';
 
 interface CameraListItemProps {
+  id:string|number;
   name: string;
   hasWarning:boolean;
   location: string;
   taskCount: number;
-  isActive: boolean;
   recorderName: string;
+  activeStatus:string;
+  current_status:'Online'|"Offline";
   onSelect?: () => void;
   onActionClick?: () => void;
   updateActiveStatus:any;
 }
 
 export const CameraListItem: React.FC<CameraListItemProps> = ({
+  id,
   name,
   hasWarning=false,
   location,
   taskCount,
-  isActive,
   recorderName,
+  activeStatus,
+  current_status,
   onSelect,
   onActionClick,
   updateActiveStatus
@@ -31,7 +35,8 @@ export const CameraListItem: React.FC<CameraListItemProps> = ({
   };
 
   const handleStatusChange=async()=>{
-    await updateActiveStatus();
+    const newStatus=activeStatus==="Active"?"Inactive":"Active";
+    await updateActiveStatus(id,newStatus);
   }
 
   return (
@@ -48,8 +53,8 @@ export const CameraListItem: React.FC<CameraListItemProps> = ({
         <div className="camera-list-item__info">
           <div className="camera-list-item__header">
             <span 
-              className="camera-list-item__status-indicator"
-              aria-label={isActive ? 'Camera active' : 'Camera inactive'}
+              className={`camera-list-item__status-indicator ${current_status==="Online" ? 'camera_active' : 'camera_inactive'}`}
+              aria-label={current_status==="Online" ? 'Camera active' : 'Camera inactive'}
             />
             <h3 className="camera-list-item__name">{name}</h3>
             { hasWarning && <img 
@@ -84,8 +89,8 @@ export const CameraListItem: React.FC<CameraListItemProps> = ({
       </div>
 
       <div className="camera-list-item__status-badge-container">
-      <span onClick={handleStatusChange} className="camera-list-item__status-badge" aria-label="Camera Status">
-          Active
+      <span onClick={handleStatusChange} className={`camera-list-item__status-badge ${activeStatus==="Active"?"camera-list-item_active_status":"camera-list-item_inactive_status"}`} aria-label="Camera Status">
+          {activeStatus}
       </span>
       </div>
 
